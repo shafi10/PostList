@@ -7,14 +7,6 @@ import { initialState } from './reducer';
 
 const selectGlobal = state => state.global || initialState;
 
-const selectRouter = state => state.router;
-
-const makeSelectCurrentUser = () =>
-  createSelector(
-    selectGlobal,
-    globalState => globalState.currentUser,
-  );
-
 const makeSelectLoading = () =>
   createSelector(
     selectGlobal,
@@ -27,23 +19,22 @@ const makeSelectError = () =>
     globalState => globalState.error,
   );
 
-const makeSelectRepos = () =>
+const makeSelectPosts = () =>
   createSelector(
     selectGlobal,
-    globalState => globalState.userData.repositories,
+    globalState => globalState.posts,
   );
 
-const makeSelectLocation = () =>
+const makeSelectPostsDetails = () =>
   createSelector(
-    selectRouter,
-    routerState => routerState.location,
+    selectGlobal,
+    globalState => globalState.postDetails,
   );
 
 export {
   selectGlobal,
-  makeSelectCurrentUser,
   makeSelectLoading,
   makeSelectError,
-  makeSelectRepos,
-  makeSelectLocation,
+  makeSelectPosts,
+  makeSelectPostsDetails,
 };

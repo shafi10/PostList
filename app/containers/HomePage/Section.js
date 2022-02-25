@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
 const Section = styled.section`
-  margin: 3em auto;
-
-  &:first-child {
-    margin-top: 0;
-  }
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 `;
 
 export default Section;

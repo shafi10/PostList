@@ -4,7 +4,7 @@ import { setPost, repoLoadingError } from 'containers/App/actions';
 
 import request from 'utils/request';
 
-export function* getRepos() {
+export function* getPostDetails() {
   const requestURL = `https://jsonplaceholder.typicode.com/posts`;
 
   try {
@@ -15,6 +15,6 @@ export function* getRepos() {
   }
 }
 
-export default function* githubData() {
+export default function* gitPostData() {
   yield takeLatest(GET_POSTS, getRepos);
 }

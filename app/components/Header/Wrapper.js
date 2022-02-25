@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.footer`
-  padding: 20px;
   text-align: center;
-  border-top: 1px solid #666;
-  font-size: 24px;
-  font-wight: bold;
+  width: 100%;
+  padding: 12px 0;
+  font-size: 32px;
+  background: green;
+  margin-top: 10px;
 `;
 
 export default Wrapper;
